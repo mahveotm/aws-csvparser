@@ -1,0 +1,2125 @@
+{
+  "roleName": "lambda_efs",
+  "resources": {
+    "s3": {
+      "service": {
+        "name": "Amazon S3",
+        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgICA8ZyB0cmFuc2Zvcm09InNjYWxlKC44NTMpIj4KICAgICAgICA8ZGVmcz4KICAgICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iLTUyMi41MyIgeTE9IjQ2NS40NyIgeDI9Ii00MTYuNDciIHkyPSI1NzEuNTMiIGdyYWRpZW50VHJhbnNmb3JtPSJyb3RhdGUoLTkwIC00NTYuNSAyNC41KSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMWI2NjBmIi8+CiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM2Y2FlM2UiLz4KICAgICAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgICAgICA8L2RlZnM+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZD0iTTAgMGg3NXY3NUgweiIvPgogICAgICAgIDxwYXRoIGQ9Ik02MS40MyA0MC4wNmMtLjI5LTEuNTctMi4wNy0yLjY4LTMuMjktMy40Ny0uMzktLjI1LTEuNDYtLjY1LTEuNTUtMWEyLjM2IDIuMzYgMCAwMS4xLS43NGwxLTcuMTljLjI5LTIuMTEuNTctNC4yMi44Ni02LjMzLjI2LTEuOTQtLjY3LTMuMjQtMi4yNS00LjMzLTMuMjItMi4yMy03LjQyLTMuMTMtMTEuMjEtMy43NWE1NS44NSA1NS44NSAwIDAwLTE0LjM4LS40NyA0MCA0MCAwIDAwLTEyLjUzIDNjLTIuMTQgMS00Ljk0IDIuNTYtNC41OSA1LjI5IDEgOC4xMiAyLjE4IDE2LjIyIDMuMjcgMjQuMzNsMS41IDExLjEzYTQuMTMgNC4xMyAwIDAwMi40NiAzLjMzYzMuMSAxLjY4IDYuOTQgMi4xNiAxMC40IDIuNDhBNTEuNSA1MS41IDAgMDA0NSA2MS43M2MyLjg4LS41MyA4LjI0LTEuNCA4LjctNSAuNTctNC40NiAxLjItOC45MiAxLjgtMTMuMzdsLjIyLTEuMzZjMS42My4zOSA2LjI4IDEuMjIgNS43MS0xLjk0ek0zNi4wNSAxNC41YzYgMCAxMi44Ny42OCAxOC4yNSAzLjY0LjgzLjQ2IDIuNzYgMS40OSAyLjE4IDIuNzFTNTQuMSAyMi42OCA1MyAyMy4xMmEzMC44OCAzMC44OCAwIDAxLTQuODMgMS4zNSA2Mi4yOSA2Mi4yOSAwIDAxLTIxLjY2LjQ1IDI2LjggMjYuOCAwIDAxLTkuMzItMi43M2MtLjcyLS40MS0xLjkxLTEuMTUtMS41OC0yLjEzYTMgMyAwIDAxMS4xOC0xLjI2IDIwLjg0IDIwLjg0IDAgMDE3LjItMi45MSA1MC4zNSA1MC4zNSAwIDAxMTIuMDYtMS4zOXptMTUuNjggNDIuMTVjLS4xNSAxLjE3LTIuMDggMS43NS0zIDIuMDhhMjkuNiAyOS42IDAgMDEtNS44OCAxLjMyIDUwLjcyIDUwLjcyIDAgMDEtMTMuMzcgMCAyMi4yNCAyMi4yNCAwIDAxLTgtMi4xNyAyIDIgMCAwMS0xLjItMS43M2MtMS03LjkzLTIuMTQtMTUuODYtMy4yMS0yMy43OWwtMS4xNi04LjZhMjMuMjYgMjMuMjYgMCAwMDcuMyAyLjU2IDU5LjYyIDU5LjYyIDAgMDA4LjMxIDEuMDkgNjQuOCA2NC44IDAgMDAxNi4zOS0uOTEgMjQuMjcgMjQuMjcgMCAwMDguMjEtMi43NEw1NCAzOS40NmExMjAuNDMgMTIwLjQzIDAgMDEtMTQuODItNiA0LjI3IDQuMjcgMCAwMS0uNjEtLjI5Yy0uMjctLjItLjItLjEtLjMzLS40MS0uMjUtLjU3LS4zMS0xLS44NC0xLjQ3YTIuMjUgMi4yNSAwIDEwLTEuMjQgNCA0LjEyIDQuMTIgMCAwMDEtLjNjLjM5LS4xMi4zOS0uMS44LjA5YTEyNi43MiAxMjYuNzIgMCAwMDE1IDYuMTZjLjc3LjI1Ljc2IDAgLjc2LjY0YTExLjQ5IDExLjQ5IDAgMDEtLjE5IDEuNDVsLS42NCA0Ljc3ek0zNi4zIDMzYzAgLjI3LS4zOC4yNC0uNDguMDdzLjQ4LS40NS40OC0uMDd6TTU2IDQwbC4zLTIuMjFjMSAuNTcgMi43IDEuNDMgMy4xNSAyLjU3LS45OC40LTIuNTMtLjEzLTMuNDUtLjM2eiIgZmlsbD0iI2ZmZiIvPgogICAgPC9nPgo8L3N2Zz4K"
+      },
+      "statements": [
+        {
+          "resource": "*",
+          "service": "s3",
+          "effect": "Allow",
+          "action": "s3:*",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonS3FullAccess",
+            "policyType": "managed"
+          }
+        }
+      ]
+    },
+    "kms": {
+      "service": {
+        "name": "AWS Key Management Service",
+        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgICA8ZyB0cmFuc2Zvcm09InNjYWxlKC44NTMpIj4KICAgICAgICA8ZGVmcz4KICAgICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iLTI0MzYuNzYiIHkxPSI5NjEuMzciIHgyPSItMjQzNi43NiIgeTI9IjExMTEuMzciIGdyYWRpZW50VHJhbnNmb3JtPSJyb3RhdGUoLTEzNSAtMTQwNi41IDI0LjUpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiZDA4MTYiLz4KICAgICAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmNTI1MiIvPgogICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgIDwvZGVmcz4KICAgICAgICA8cGF0aCBmaWxsPSJ1cmwoI2EpIiBkPSJNMCAwaDc1djc1SDB6Ii8+CiAgICAgICAgPGcgZmlsbD0iI2ZmZiI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yNC41IDYyYTEgMSAwIDAxLS43NS0uMzRsLTMuNS00QTEgMSAwIDAxMjAgNTd2LTIuNThsLTIuNzEtMi43MWExIDEgMCAwMTAtMS40MmwyLjcxLTIuN3YtMS4xN2wtMi43MS0yLjcxYTEgMSAwIDAxMC0xLjQybDIuNzEtMi43di0yLjQyYTEyLjQ1IDEyLjQ1IDAgMDEtOC0xMS44MiAxMi41IDEyLjUgMCAwMTI1IC4xNSAxMi40MyAxMi40MyAwIDAxLTggMTEuNjZWNThhMSAxIDAgMDEtLjM1Ljc2bC0zLjUgM2ExIDEgMCAwMS0uNjUuMjR6TTIyIDU2LjYybDIuNiAzIDIuNC0yLjA4VjM2LjQ1YTEgMSAwIDAxLjctMSAxMC40OSAxMC40OSAwIDEwLTYuNDMgMCAxIDEgMCAwMS43MyAxVjQwYTEgMSAwIDAxLS4yOS43MUwxOS40MiA0M2wyLjI5IDIuMjlBMSAxIDAgMDEyMiA0NnYyYTEgMSAwIDAxLS4yOS43TDE5LjQyIDUxbDIuMjkgMi4yOUExIDEgMCAwMTIyIDU0em0yLjUtMzAuMTJBNC41IDQuNSAwIDExMjkgMjJhNC41MSA0LjUxIDAgMDEtNC41IDQuNXptMC03QTIuNSAyLjUgMCAxMDI3IDIyYTIuNSAyLjUgMCAwMC0yLjUtMi41ek02MS4wOSA1NUgzMXYtMmgzMFYzMUgzOXYtMmgyMi4wOUExLjkgMS45IDAgMDE2MyAzMC44N3YyMi4yNkExLjkgMS45IDAgMDE2MS4wOSA1NXoiLz4KICAgICAgICAgICAgPHBhdGggZD0iTTM0LjUgNDUuNWE0IDQgMCAxMTQtNCA0IDQgMCAwMS00IDR6bTAtNmEyIDIgMCAxMDIgMiAyIDIgMCAwMC0yLTJ6TTQ0LjUgNDUuNWE0IDQgMCAxMTQtNCA0IDQgMCAwMS00IDR6bTAtNmEyIDIgMCAxMDIgMiAyIDIgMCAwMC0yLTJ6TTMxIDQ4aDd2MmgtN3pNNDEgNDhoN3YyaC03ek01MSA0OGg3djJoLTd6Ii8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+      },
+      "statements": [
+        {
+          "resource": "*",
+          "service": "kms",
+          "effect": "Allow",
+          "action": "kms:ListAliases",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        }
+      ]
+    },
+    "lambda": {
+      "service": {
+        "name": "AWS Lambda",
+        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgICA8ZyB0cmFuc2Zvcm09InNjYWxlKC44NTMpIj4KICAgICAgICA8ZGVmcz4KICAgICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iLTE3ODguMDUiIHkxPSI2OTIuNjciIHgyPSItMTc4OC4wNSIgeTI9Ijg0Mi42NyIgZ3JhZGllbnRUcmFuc2Zvcm09InJvdGF0ZSgtMTM1IC0xMDI2LjUgMjQuNSkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2M4NTExYiIvPgogICAgICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZjkwIi8+CiAgICAgICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICAgICAgPC9kZWZzPgogICAgICAgIDxwYXRoIGZpbGw9InVybCgjYSkiIGQ9Ik0wIDBoNzV2NzVIMHoiLz4KICAgICAgICA8ZyBmaWxsPSIjZmZmIj4KICAgICAgICAgICAgPHBhdGggZD0iTTYwLjUgNjIuNUg0OC4xOGExIDEgMCAwMS0uOS0uNTdMMjkuODYgMjUuNWgtNy4zN2ExIDEgMCAwMS0xLTF2LTExYTEgMSAwIDAxMS0xaDE1LjRhMSAxIDAgMDEuOS41N0w1Ni4xMyA0OS41aDQuMzdhMSAxIDAgMDExIDF2MTFhMSAxIDAgMDEtMSAxem0tMTEuNjktMkg1OS41di05aC00YTEgMSAwIDAxLS45LS41N0wzNy4yNiAxNC41SDIzLjV2OWg3YTEgMSAwIDAxLjkuNTd6Ii8+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yNy40OCA2Mi41aC0xM2ExIDEgMCAwMS0uODUtLjQ3IDEgMSAwIDAxLS4wNS0xbDEzLjYtMjguNDFhMSAxIDAgMDEuOS0uNTcgMSAxIDAgMDEuOS41NkwzNS40OSA0NmExIDEgMCAwMTAgLjg3bC03LjEgMTVhMSAxIDAgMDEtLjkxLjYzem0tMTEuNC0yaDEwLjc3bDYuNjMtMTQtNS4zOS0xMS4xNXoiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo="
+      },
+      "statements": [
+        {
+          "resource": "*",
+          "service": "lambda",
+          "effect": "Allow",
+          "action": "lambda:*",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        }
+      ]
+    },
+    "iam": {
+      "service": {
+        "name": "Identity And Access Management",
+        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgICA8ZyB0cmFuc2Zvcm09InNjYWxlKC44NTMpIj4KICAgICAgICA8ZGVmcz4KICAgICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iLTI0MTcuNDciIHkxPSItNDEuNTMiIHgyPSItMjUyMy41NCIgeTI9IjY0LjU0IiBncmFkaWVudFRyYW5zZm9ybT0icm90YXRlKDE4MCAtMTIxNi41IDI0LjUpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiZDA4MTYiLz4KICAgICAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmNTI1MiIvPgogICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgIDwvZGVmcz4KICAgICAgICA8cGF0aCBmaWxsPSJ1cmwoI2EpIiBkPSJNMCAwaDc1djc1SDB6Ii8+CiAgICAgICAgPGcgZmlsbD0iI2ZmZiI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik01OS43IDE5SDE1LjNhMi44MSAyLjgxIDAgMDAtMi44IDIuOHYzMS40YTIuODEgMi44MSAwIDAwMi44IDIuOGg0NC40YTIuODEgMi44MSAwIDAwMi44LTIuOFYyMS44YTIuODEgMi44MSAwIDAwLTIuOC0yLjh6bS44IDM0LjJhLjguOCAwIDAxLS44LjhIMTUuM2EuOC44IDAgMDEtLjgtLjhWMjEuOGEuOC44IDAgMDEuOC0uOGg0NC40YS44LjggMCAwMS44Ljh6Ii8+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik00MC41IDMyaDEwdjJoLTEwek01NC41IDMyaDJ2MmgtMnpNMzYuMjEgMzUuM2ExIDEgMCAwMC0uNzEtLjNoLTE0di01YTMuNjMgMy42MyAwIDAxMS41LTIuODVBNS43NCA1Ljc0IDAgMDEyNi41IDI2YTUuNTUgNS41NSAwIDAxMy42IDEuMjZBMy42NCAzLjY0IDAgMDEzMS41IDMwdjVoMnYtNS40YTUuMDcgNS4wNyAwIDAwLTIuMTEtNEE3LjkyIDcuOTIgMCAwMDI2LjUgMjRjLTMuODYgMC03IDIuNTEtNyA1LjU5VjM1aC0yYTEgMSAwIDAwLTEgMXYxNGExIDEgMCAwMDEgMWgxOGExIDEgMCAwMDEtMVYzNmExIDEgMCAwMC0uMjktLjd6TTM0LjUgNDBoLTN2MmgzdjJoLTN2MmgzdjNoLTE2VjM3aDE2eiIvPgogICAgICAgICAgICA8cGF0aCBkPSJNMjYuNSAzOC41N2EyLjkzIDIuOTMgMCAwMC0xIDUuNjhWNDdoMnYtMi43NWEyLjkzIDIuOTMgMCAwMC0xLTUuNjh6bTAgNC4yYTEuMjcgMS4yNyAwIDExMS4yNy0xLjI3IDEuMjcgMS4yNyAwIDAxLTEuMjcgMS4yN3pNNDAuNSAzN2g3djJoLTd6TTUxLjUgMzdoNXYyaC01ek00MC41IDQyaDEzdjJoLTEzeiIvPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+Cg=="
+      },
+      "statements": [
+        {
+          "resource": "*",
+          "service": "iam",
+          "effect": "Allow",
+          "action": "iam:GetPolicy",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "iam",
+          "effect": "Allow",
+          "action": "iam:GetPolicyVersion",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "iam",
+          "effect": "Allow",
+          "action": "iam:GetRole",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "iam",
+          "effect": "Allow",
+          "action": "iam:GetRolePolicy",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "iam",
+          "effect": "Allow",
+          "action": "iam:ListAttachedRolePolicies",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "iam",
+          "effect": "Allow",
+          "action": "iam:ListRolePolicies",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "iam",
+          "effect": "Allow",
+          "action": "iam:ListRoles",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "iam",
+          "effect": "Allow",
+          "action": "iam:PassRole",
+          "source": {
+            "index": "1",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        }
+      ]
+    },
+    "ec2": {
+      "service": {
+        "name": "Amazon EC2",
+        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgICA8ZyB0cmFuc2Zvcm09InNjYWxlKC44NTMpIj4KICAgICAgICA8ZGVmcz4KICAgICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMTEzMS4xIiB5MT0iLTUxNi40OCIgeDI9IjExMzEuMSIgeTI9Ii0zNjYuNDgiIGdyYWRpZW50VHJhbnNmb3JtPSJyb3RhdGUoLTEzNSA2ODMuNDk4IDI0LjUpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNjODUxMWIiLz4KICAgICAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2Y5MCIvPgogICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgIDwvZGVmcz4KICAgICAgICA8cGF0aCBmaWxsPSJ1cmwoI2EpIiBkPSJNMCAwaDc1djc1SDB6Ii8+CiAgICAgICAgPGcgZmlsbD0iI2ZmZiI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik02MC40OSA0MC41aC01di0yaDV2LTI0aC0yNHY1aC0ydi01YTIgMiAwIDAxMi0yaDI0YTIgMiAwIDAxMiAydjI0YTIgMiAwIDAxLTIgMnpNMzguNDkgNjIuNWgtMjRhMiAyIDAgMDEtMi0ydi0yNGEyIDIgMCAwMTItMmg1djJoLTV2MjRoMjR2LTVoMnY1YTIgMiAwIDAxLTIgMnoiLz4KICAgICAgICAgICAgPHBhdGggZD0iTTUzLjUgMjguNXYtMmgtM2EyLjE4IDIuMTggMCAwMC0yLTJ2LTNoLTJ2M2gtM3YtM2gtMnYzaC0zdi0zaC0ydjNoLTN2LTNoLTJ2M2gtM3YtM2gtMnYzYTIuMTggMi4xOCAwIDAwLTIgMmgtM3YyaDN2M2gtM3YyaDN2M2gtM3YyaDN2M2gtM3YyaDN2M2gtM3YyaDNhMi4xOCAyLjE4IDAgMDAyIDJ2M2gydi0zaDN2M2gydi0zaDN2M2gydi0zaDN2M2gydi0zaDN2M2gydi0zYTIuMTggMi4xOCAwIDAwMi0yaDN2LTJoLTN2LTNoM3YtMmgtM3YtM2gzdi0yaC0zdi0zaDN2LTJoLTN2LTN6bS01IDE5LjgyYS4xOC4xOCAwIDAxLS4xOC4xOEgyNi42OGEuMTguMTggMCAwMS0uMTgtLjE4VjI2LjY4YS4xOC4xOCAwIDAxLjE4LS4xOGgyMS42NGEuMTguMTggMCAwMS4xOC4xOHoiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo="
+      },
+      "statements": [
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:AcceptVpcPeeringConnection",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:AcceptVpcEndpointConnections",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:AllocateAddress",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:AssignIpv6Addresses",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:AssignPrivateIpAddresses",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:AssociateAddress",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:AssociateDhcpOptions",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:AssociateRouteTable",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:AssociateSubnetCidrBlock",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:AssociateVpcCidrBlock",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:AttachClassicLinkVpc",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:AttachInternetGateway",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:AttachNetworkInterface",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:AttachVpnGateway",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:AuthorizeSecurityGroupEgress",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:AuthorizeSecurityGroupIngress",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateCarrierGateway",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateCustomerGateway",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateDefaultSubnet",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateDefaultVpc",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateDhcpOptions",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateEgressOnlyInternetGateway",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateFlowLogs",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateInternetGateway",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateLocalGatewayRouteTableVpcAssociation",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateNatGateway",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateNetworkAcl",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateNetworkAclEntry",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateNetworkInterface",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateNetworkInterfacePermission",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateRoute",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateRouteTable",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateSecurityGroup",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateSubnet",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateTags",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateVpc",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateVpcEndpoint",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateVpcEndpointConnectionNotification",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateVpcEndpointServiceConfiguration",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateVpcPeeringConnection",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateVpnConnection",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateVpnConnectionRoute",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:CreateVpnGateway",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteCarrierGateway",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteCustomerGateway",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteDhcpOptions",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteEgressOnlyInternetGateway",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteFlowLogs",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteInternetGateway",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteLocalGatewayRouteTableVpcAssociation",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteNatGateway",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteNetworkAcl",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteNetworkAclEntry",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteNetworkInterface",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteNetworkInterfacePermission",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteRoute",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteRouteTable",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteSecurityGroup",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteSubnet",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteTags",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteVpc",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteVpcEndpoints",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteVpcEndpointConnectionNotifications",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteVpcEndpointServiceConfigurations",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteVpcPeeringConnection",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteVpnConnection",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteVpnConnectionRoute",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DeleteVpnGateway",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeAccountAttributes",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeAddresses",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeAvailabilityZones",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeCarrierGateways",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeClassicLinkInstances",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeCustomerGateways",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeDhcpOptions",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeEgressOnlyInternetGateways",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeFlowLogs",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeInstances",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeInternetGateways",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeIpv6Pools",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeLocalGatewayRouteTables",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeLocalGatewayRouteTableVpcAssociations",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeKeyPairs",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeMovingAddresses",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeNatGateways",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeNetworkAcls",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeNetworkInterfaceAttribute",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeNetworkInterfacePermissions",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeNetworkInterfaces",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribePrefixLists",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeRouteTables",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeSecurityGroupReferences",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeSecurityGroupRules",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeSecurityGroups",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeStaleSecurityGroups",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeSubnets",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeTags",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeVpcAttribute",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeVpcClassicLink",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeVpcClassicLinkDnsSupport",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeVpcEndpointConnectionNotifications",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeVpcEndpointConnections",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeVpcEndpoints",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeVpcEndpointServiceConfigurations",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeVpcEndpointServicePermissions",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeVpcEndpointServices",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeVpcPeeringConnections",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeVpcs",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeVpnConnections",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeVpnGateways",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DetachClassicLinkVpc",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DetachInternetGateway",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DetachNetworkInterface",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DetachVpnGateway",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DisableVgwRoutePropagation",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DisableVpcClassicLink",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DisableVpcClassicLinkDnsSupport",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DisassociateAddress",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DisassociateRouteTable",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DisassociateSubnetCidrBlock",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DisassociateVpcCidrBlock",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:EnableVgwRoutePropagation",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:EnableVpcClassicLink",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:EnableVpcClassicLinkDnsSupport",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:ModifyNetworkInterfaceAttribute",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:ModifySecurityGroupRules",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:ModifySubnetAttribute",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:ModifyVpcAttribute",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:ModifyVpcEndpoint",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:ModifyVpcEndpointConnectionNotification",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:ModifyVpcEndpointServiceConfiguration",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:ModifyVpcEndpointServicePermissions",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:ModifyVpcPeeringConnectionOptions",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:ModifyVpcTenancy",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:MoveAddressToVpc",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:RejectVpcEndpointConnections",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:RejectVpcPeeringConnection",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:ReleaseAddress",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:ReplaceNetworkAclAssociation",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:ReplaceNetworkAclEntry",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:ReplaceRoute",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:ReplaceRouteTableAssociation",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:ResetNetworkInterfaceAttribute",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:RestoreAddressToClassic",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:RevokeSecurityGroupEgress",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:RevokeSecurityGroupIngress",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:UnassignIpv6Addresses",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:UnassignPrivateIpAddresses",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:UpdateSecurityGroupRuleDescriptionsEgress",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:UpdateSecurityGroupRuleDescriptionsIngress",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonVPCFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeSecurityGroups",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeSubnets",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "ec2",
+          "effect": "Allow",
+          "action": "ec2:DescribeVpcs",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        }
+      ]
+    },
+    "elasticfilesystem": {
+      "service": {
+        "name": "Amazon Elastic File System",
+        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgICA8ZyB0cmFuc2Zvcm09InNjYWxlKC44NTMpIj4KICAgICAgICA8ZGVmcz4KICAgICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMTgwLjI1IiB5MT0iNDMxLjEzIiB4Mj0iMTgwLjI1IiB5Mj0iMjgxLjEzIiBncmFkaWVudFRyYW5zZm9ybT0icm90YXRlKDQ1IDQ5My41IDI0LjUwNCkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzFiNjYwZiIvPgogICAgICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNmNhZTNlIi8+CiAgICAgICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICAgICAgPC9kZWZzPgogICAgICAgIDxwYXRoIGZpbGw9InVybCgjYSkiIGQ9Ik0wIDBoNzV2NzVIMHoiLz4KICAgICAgICA8ZyBmaWxsPSIjZmZmIj4KICAgICAgICAgICAgPHBhdGggZD0iTTE0LjUgMTUuOTFsNy4yOSA3LjMgMS40Mi0xLjQyLTcuMy03LjI5aDUuNTl2LTJoLThhMSAxIDAgMDAtMSAxdjhoMnpNNjEuNSAxMi41aC04djJoNS41OWwtNy4zIDcuMjkgMS40MiAxLjQyIDcuMjktNy4zdjUuNTloMnYtOGExIDEgMCAwMC0xLTF6TTIxLjc5IDUxLjc5bC03LjI5IDcuM1Y1My41aC0ydjhhMSAxIDAgMDAxIDFoOHYtMmgtNS41OWw3LjMtNy4yOXpNNjAuNSA1OS4wOWwtNy4yOS03LjMtMS40MiAxLjQyIDcuMyA3LjI5SDUzLjV2Mmg4YTEgMSAwIDAwMS0xdi04aC0yek0yOS42IDIzLjI0YTkuNDEgOS40MSAwIDAxMTAuNjEgMi4wOSAxMS4yNSAxMS4yNSAwIDAxMi42NCA0LjI5IDEgMSAwIDAwMS43NC4yNiAzLjMzIDMuMzMgMCAwMTIuNjYtMS4zOWMxLjU0IDAgMy40IDEuMTggMy41OSA0LjVhMSAxIDAgMDAuOC45MmMzLjg5LjgyIDUuODYgMyA1Ljg2IDYuNCAwIDMuMjItMS40MSA1LjEzLTQuMzIgNS44NGwuNDcgMS45NGMzLjc3LS45MSA1Ljg1LTMuNjggNS44NS03Ljc4cy0yLjM4LTctNi43My04LjE5Yy0uNTEtMy44OC0zLjA4LTUuNjMtNS41Mi01LjYzYTUuMTYgNS4xNiAwIDAwLTMuMSAxIDEyLjc3IDEyLjc3IDAgMDAtMi41My0zLjYyIDExLjQ0IDExLjQ0IDAgMDAtMTIuNzktMi41MiAxMS44MSAxMS44MSAwIDAwLTYuNzggMTAuNHYuNTVhOCA4IDAgMDAtNS41NyA3Ljkydi41N2E4LjI5IDguMjkgMCAwMDUuNjYgNy4zNGwuNjYtMS44OWE2LjMgNi4zIDAgMDEtNC4zMy01LjU2di0uNDZBNiA2IDAgMDEyMy4zOCAzNGExIDEgMCAwMC43NS0xIDEwLjQ1IDEwLjQ1IDAgMDEtLjA4LTEuMTcgOS44MiA5LjgyIDAgMDE1LjU1LTguNTl6Ii8+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik01My40NSA0Mi44MmExIDEgMCAwMC0uMTQtLjkgMSAxIDAgMDAtLjgxLS40MmgtM2EzLjg0IDMuODQgMCAwMC0xLjEyLTIuMjcgMi40OCAyLjQ4IDAgMDAtMS44My0uNzNIMzYuMjdjLS4yNi0uODEtLjc2LTEuODMtMS41My0yaC00LjE5Yy0uODkgMC0xLjQ4IDEuMTItMS43OCAyaC0xLjIxYTIuNTUgMi41NSAwIDAwLTEuODkuNzJBMy45IDMuOSAwIDAwMjQuNSA0MnYxMi41YTEgMSAwIDAwMSAxaDIzYTEgMSAwIDAwLjk0LS42OXptLTIuMzQuNjhsLTEuNjEgNC44NFY0My41em0tMy42MSAxMGgtMjFWNDJhMS44NiAxLjg2IDAgMDEuNS0xLjMxLjU4LjU4IDAgMDEuNDYtLjE5aDJhMSAxIDAgMDAxLS45NCA0LjYxIDQuNjEgMCAwMS40My0xLjA2aDMuMjFhNiA2IDAgMDEuMzkgMSAxIDEgMCAwMDEgMWgxMS4wOGEuNTQuNTQgMCAwMS4zOS4xOUExLjg4IDEuODggMCAwMTQ3LjUgNDJ6Ii8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+      },
+      "statements": [
+        {
+          "resource": "*",
+          "service": "elasticfilesystem",
+          "effect": "Allow",
+          "action": "elasticfilesystem:ClientMount",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonElasticFileSystemClientFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "elasticfilesystem",
+          "effect": "Allow",
+          "action": "elasticfilesystem:ClientRootAccess",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonElasticFileSystemClientFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "elasticfilesystem",
+          "effect": "Allow",
+          "action": "elasticfilesystem:ClientWrite",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonElasticFileSystemClientFullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "elasticfilesystem",
+          "effect": "Allow",
+          "action": "elasticfilesystem:DescribeMountTargets",
+          "source": {
+            "index": "0",
+            "policyName": "AmazonElasticFileSystemClientFullAccess",
+            "policyType": "managed"
+          }
+        }
+      ]
+    },
+    "cloudwatch": {
+      "service": {
+        "name": "Amazon CloudWatch",
+        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgICA8ZyB0cmFuc2Zvcm09InNjYWxlKC44NTMpIj4KICAgICAgICA8ZGVmcz4KICAgICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iNjE3LjQ3IiB5MT0iLTY3NC41MyIgeDI9IjcyMy41MyIgeTI9Ii01NjguNDciIGdyYWRpZW50VHJhbnNmb3JtPSJyb3RhdGUoLTkwIDY4My41IDI0LjUpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiMDA4NGQiLz4KICAgICAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmNGY4YiIvPgogICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgIDwvZGVmcz4KICAgICAgICA8cGF0aCBmaWxsPSJ1cmwoI2EpIiBkPSJNMCAwaDc1djc1SDB6Ii8+CiAgICAgICAgPGcgZmlsbD0iI2ZmZiI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0zMS41IDQ4aC0xMWE2LjExIDYuMTEgMCAwMS0zLjE0LS45NCAxMC4xOCAxMC4xOCAwIDAxLTQuODYtOC44OUE5LjA5IDkuMDkgMCAwMTE5IDI5di0uNzhhMTMuNyAxMy43IDAgMDE3LjgyLTEyLjA4IDEzLjEyIDEzLjEyIDAgMDExNC43OSAyLjkzIDE1LjA1IDE1LjA1IDAgMDEzIDQuNCA1Ljg2IDUuODYgMCAwMTMuNjgtMS4zYzIuNzIgMCA1Ljc4IDIuMDYgNi4zNCA2LjU4IDIuNTcuNjEgNy44NSAyLjcxIDcuODUgOS41MWE5IDkgMCAwMS00LjczIDguMzlsLTEtMS43NWE3LjA4IDcuMDggMCAwMDMuNy02LjY0YzAtNS44OC00Ljg3LTcuMzQtNy03LjdhMSAxIDAgMDEtLjY1LS40MiAxIDEgMCAwMS0uMTctLjcyYy0uMjktMy42My0yLjQxLTUuMjUtNC40LTUuMjVBNCA0IDAgMDA0NSAyNS44NmExIDEgMCAwMS0uOTUuNCAxIDEgMCAwMS0uNzktLjY2IDEzLjYgMTMuNiAwIDAwLTMuMTQtNS4xMkExMS4xNiAxMS4xNiAwIDAwMjcuNjEgMTggMTEuNzYgMTEuNzYgMCAwMDIxIDI4LjJhMTIuMzQgMTIuMzQgMCAwMC4wOCAxLjM4IDEgMSAwIDAxLS44MSAxLjExIDcuMjQgNy4yNCAwIDAwLTUuNzggNy40OCA4LjEzIDguMTMgMCAwMDMuOTMgNy4yIDQgNCAwIDAwMi4wOC42M2gxMXoiLz4KICAgICAgICAgICAgPHBhdGggZD0iTTYxLjM5IDU0bC03LjEtNy4xM0ExMC42MSAxMC42MSAwIDEwNDkuNDMgNTJsNyA3YTMuNTIgMy41MiAwIDAwMi41IDEgMy40OCAzLjQ4IDAgMDAyLjQ5LTEgMy41MiAzLjUyIDAgMDAtLjAzLTV6TTQ0LjYgNTEuMTdhOC41OSA4LjU5IDAgMTE4LjU5LTguNTkgOC41OSA4LjU5IDAgMDEtOC41OSA4LjU5ek02MCA1Ny41NWExLjU3IDEuNTcgMCAwMS0yLjE2IDBsLTYuNjYtNi42NmExMC40OCAxMC40OCAwIDAwMi4xMi0yLjI0bDYuNyA2Ljc0YTEuNTQgMS41NCAwIDAxMCAyLjE2eiIvPgogICAgICAgICAgICA8cGF0aCBkPSJNNDcuMzUgMzcuOTNsLTEuMTkgMS42MWEzLjM3IDMuMzcgMCAwMC01LjM0IDMuMkEzLjMgMy4zIDAgMDA0Mi4xNSA0NUw0MSA0Ni41NmE1LjM3IDUuMzcgMCAwMTYuMzktOC42M3oiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo="
+      },
+      "statements": [
+        {
+          "resource": "*",
+          "service": "cloudwatch",
+          "effect": "Allow",
+          "action": "cloudwatch:ListMetrics",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "cloudwatch",
+          "effect": "Allow",
+          "action": "cloudwatch:GetMetricData",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        }
+      ]
+    },
+    "xray": {
+      "service": {
+        "name": "AWS X-Ray",
+        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgICA8ZyB0cmFuc2Zvcm09InNjYWxlKC44NTMpIj4KICAgICAgICA8ZGVmcz4KICAgICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iLTE0NjMuNyIgeTE9IjU1OC4zMiIgeDI9Ii0xNDYzLjciIHkyPSI3MDguMzIiIGdyYWRpZW50VHJhbnNmb3JtPSJyb3RhdGUoLTEzNSAtODM2LjUgMjQuNSkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzJlMjdhZCIvPgogICAgICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNTI3ZmZmIi8+CiAgICAgICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICAgICAgPC9kZWZzPgogICAgICAgIDxwYXRoIGZpbGw9InVybCgjYSkiIGQ9Ik0wIDBoNzV2NzVIMHoiLz4KICAgICAgICA8ZyBmaWxsPSIjZmZmIj4KICAgICAgICAgICAgPHBhdGggZD0iTTU0LjY0IDQ1LjQybC0uMjgtMmMyLjgtLjM5IDYuMTQtMiA2LjE0LTcuMzMgMC01LTMuOC02Ljg0LTctNy40OGExIDEgMCAwMS0uOC0uOTJjLS4yMi0zLjkxLTIuNDktNS4zLTQuMzctNS4zYTQuMDcgNC4wNyAwIDAwLTMuMjUgMS42NCAxIDEgMCAwMS0uOTUuMzkgMSAxIDAgMDEtLjc5LS42NCAxMy4yNyAxMy4yNyAwIDAwLTMuMTItNUExMS4xNiAxMS4xNiAwIDAwMjEgMjYuMzNhMTIuMDggMTIuMDggMCAwMC4wOCAxLjM1IDEgMSAwIDAxLS43NSAxLjA5QzE4LjE2IDI5LjMxIDE0LjUgMzEgMTQuNSAzNnYuNTVjLjE2IDMgMi43MyA1LjY5IDYuMjQgNi42MmwtLjUyIDEuOTRjLTQuMzMtMS4xNi03LjUxLTQuNjQtNy43Mi04LjQ2VjM2YTguOTIgOC45MiAwIDAxNi41My05di0uNzRhMTMuMTggMTMuMTggMCAwMTIyLjU5LTguODYgMTQuOTIgMTQuOTIgMCAwMTMgNC4yOSA2IDYgMCAwMTMuNzEtMS4yOGMyLjgxIDAgNS43NiAyIDYuMyA2LjQyIDUuMDggMS4yNiA3Ljg3IDQuNTMgNy44NyA5LjI4IDAgNS4yMi0yLjg3IDguNjEtNy44NiA5LjMxeiIvPgogICAgICAgICAgICA8cGF0aCBkPSJNMzcuNSAzMS41NGExNSAxNSAwIDEwMTUgMTUgMTUgMTUgMCAwMC0xNS0xNXptMCAyOGExMyAxMyAwIDExMTMtMTMgMTMgMTMgMCAwMS0xMyAxM3oiLz4KICAgICAgICAgICAgPHBhdGggZD0iTTQ1LjUgNTEuNDl2MmgtMTZ2LTJoMnYtNS45NWgydjUuOTVoM3YtOC45NWgydjguOTVoM1YzOS41NGgydjExLjk1aDJ6Ii8+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4K"
+      },
+      "statements": [
+        {
+          "resource": "*",
+          "service": "xray",
+          "effect": "Allow",
+          "action": "xray:GetTraceSummaries",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "xray",
+          "effect": "Allow",
+          "action": "xray:BatchGetTraces",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        }
+      ]
+    },
+    "tag": {
+      "service": {
+        "name": "Amazon Resource Group Tagging API",
+        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDY0IDY0Ij4KICAgIDxkZWZzPgogICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9Ii0zNy41IiB5MT0iMzcuNSIgeDI9IjExMi41IiB5Mj0iMzcuNSIgZ3JhZGllbnRUcmFuc2Zvcm09InJvdGF0ZSgtNDUgMzcuNTAyIDM3LjQ5NikiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMTQxYjIzIi8+CiAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzVhNjM2ZSIvPgogICAgICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgICA8L2RlZnM+CiAgICA8cGF0aCBmaWxsPSJ1cmwoI2EpIiBkPSJNMCAwaDY0djY0SDB6Ii8+CiAgICA8ZyB0cmFuc2Zvcm09InNjYWxlKC43NSkgdHJhbnNsYXRlKDEwIDEwKSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMi41NnB4Ij4KICAgICAgICA8cG9seWdvbiBwb2ludHM9IjU4Ljc4IDQ4IDU4Ljc4IDE2IDMyIDEuMjggNS4yMiAxNiA1LjIyIDQ4IDMyIDYyLjcyIDU4Ljc4IDQ4Ii8+CiAgICAgICAgPHBvbHlsaW5lIHBvaW50cz0iNS4yMiAxNiAzMiAzMiA1OC43OCAxNiIvPgogICAgICAgIDxsaW5lIHgxPSIzMiIgeTE9IjMyIiB4Mj0iMzIiIHkyPSI2Mi43MiIvPgogICAgPC9nPgo8L3N2Zz4="
+      },
+      "statements": [
+        {
+          "resource": "*",
+          "service": "tag",
+          "effect": "Allow",
+          "action": "tag:GetResources",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        }
+      ]
+    },
+    "logs": {
+      "service": {
+        "name": "Amazon CloudWatch Logs",
+        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgICA8ZyB0cmFuc2Zvcm09InNjYWxlKC44NTMpIj4KICAgICAgICA8ZGVmcz4KICAgICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iNjE3LjQ3IiB5MT0iLTY3NC41MyIgeDI9IjcyMy41MyIgeTI9Ii01NjguNDciIGdyYWRpZW50VHJhbnNmb3JtPSJyb3RhdGUoLTkwIDY4My41IDI0LjUpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiMDA4NGQiLz4KICAgICAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmNGY4YiIvPgogICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgIDwvZGVmcz4KICAgICAgICA8cGF0aCBmaWxsPSJ1cmwoI2EpIiBkPSJNMCAwaDc1djc1SDB6Ii8+CiAgICAgICAgPGcgZmlsbD0iI2ZmZiI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0zMS41IDQ4aC0xMWE2LjExIDYuMTEgMCAwMS0zLjE0LS45NCAxMC4xOCAxMC4xOCAwIDAxLTQuODYtOC44OUE5LjA5IDkuMDkgMCAwMTE5IDI5di0uNzhhMTMuNyAxMy43IDAgMDE3LjgyLTEyLjA4IDEzLjEyIDEzLjEyIDAgMDExNC43OSAyLjkzIDE1LjA1IDE1LjA1IDAgMDEzIDQuNCA1Ljg2IDUuODYgMCAwMTMuNjgtMS4zYzIuNzIgMCA1Ljc4IDIuMDYgNi4zNCA2LjU4IDIuNTcuNjEgNy44NSAyLjcxIDcuODUgOS41MWE5IDkgMCAwMS00LjczIDguMzlsLTEtMS43NWE3LjA4IDcuMDggMCAwMDMuNy02LjY0YzAtNS44OC00Ljg3LTcuMzQtNy03LjdhMSAxIDAgMDEtLjY1LS40MiAxIDEgMCAwMS0uMTctLjcyYy0uMjktMy42My0yLjQxLTUuMjUtNC40LTUuMjVBNCA0IDAgMDA0NSAyNS44NmExIDEgMCAwMS0uOTUuNCAxIDEgMCAwMS0uNzktLjY2IDEzLjYgMTMuNiAwIDAwLTMuMTQtNS4xMkExMS4xNiAxMS4xNiAwIDAwMjcuNjEgMTggMTEuNzYgMTEuNzYgMCAwMDIxIDI4LjJhMTIuMzQgMTIuMzQgMCAwMC4wOCAxLjM4IDEgMSAwIDAxLS44MSAxLjExIDcuMjQgNy4yNCAwIDAwLTUuNzggNy40OCA4LjEzIDguMTMgMCAwMDMuOTMgNy4yIDQgNCAwIDAwMi4wOC42M2gxMXoiLz4KICAgICAgICAgICAgPHBhdGggZD0iTTYxLjM5IDU0bC03LjEtNy4xM0ExMC42MSAxMC42MSAwIDEwNDkuNDMgNTJsNyA3YTMuNTIgMy41MiAwIDAwMi41IDEgMy40OCAzLjQ4IDAgMDAyLjQ5LTEgMy41MiAzLjUyIDAgMDAtLjAzLTV6TTQ0LjYgNTEuMTdhOC41OSA4LjU5IDAgMTE4LjU5LTguNTkgOC41OSA4LjU5IDAgMDEtOC41OSA4LjU5ek02MCA1Ny41NWExLjU3IDEuNTcgMCAwMS0yLjE2IDBsLTYuNjYtNi42NmExMC40OCAxMC40OCAwIDAwMi4xMi0yLjI0bDYuNyA2Ljc0YTEuNTQgMS41NCAwIDAxMCAyLjE2eiIvPgogICAgICAgICAgICA8cGF0aCBkPSJNNDcuMzUgMzcuOTNsLTEuMTkgMS42MWEzLjM3IDMuMzcgMCAwMC01LjM0IDMuMkEzLjMgMy4zIDAgMDA0Mi4xNSA0NUw0MSA0Ni41NmE1LjM3IDUuMzcgMCAwMTYuMzktOC42M3oiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo="
+      },
+      "statements": [
+        {
+          "resource": "*",
+          "service": "logs",
+          "effect": "Allow",
+          "action": "logs:CreateLogGroup",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambdaBasicExecutionRole",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "logs",
+          "effect": "Allow",
+          "action": "logs:CreateLogStream",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambdaBasicExecutionRole",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "logs",
+          "effect": "Allow",
+          "action": "logs:PutLogEvents",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambdaBasicExecutionRole",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "logs",
+          "effect": "Allow",
+          "action": "logs:DescribeLogGroups",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "arn:aws:logs:*:*:log-group:/aws/lambda/*",
+          "service": "logs",
+          "effect": "Allow",
+          "action": "logs:DescribeLogStreams",
+          "source": {
+            "index": "2",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "arn:aws:logs:*:*:log-group:/aws/lambda/*",
+          "service": "logs",
+          "effect": "Allow",
+          "action": "logs:GetLogEvents",
+          "source": {
+            "index": "2",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "arn:aws:logs:*:*:log-group:/aws/lambda/*",
+          "service": "logs",
+          "effect": "Allow",
+          "action": "logs:FilterLogEvents",
+          "source": {
+            "index": "2",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        }
+      ]
+    },
+    "cloudformation": {
+      "service": {
+        "name": "AWS CloudFormation",
+        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgICA8ZyB0cmFuc2Zvcm09InNjYWxlKC44NTMpIj4KICAgICAgICA8ZGVmcz4KICAgICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMTI0LjYiIHkxPSIyOTYuNzgiIHgyPSIxMjQuNiIgeTI9IjE0Ni43OCIgZ3JhZGllbnRUcmFuc2Zvcm09InJvdGF0ZSg0NSAzMDMuNSAyNC41MDQpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNiMDA4NGQiLz4KICAgICAgICAgICAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmNGY4YiIvPgogICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgIDwvZGVmcz4KICAgICAgICA8cGF0aCBmaWxsPSJ1cmwoI2EpIiBkPSJNMCAwaDc1djc1SDB6Ii8+CiAgICAgICAgPHBhdGggZD0iTTYyLjUgMzVhOCA4IDAgMDEtNy41IDguMTJINDAuNXYtMkg1NWMuMTQgMCA1LjU1LS42IDUuNTUtNi4xMyAwLTQuNjQtMy44OC01LjgtNS41NC02LjA5YTEgMSAwIDAxLS44Mi0xLjE0YzAtMi0uODQtMy40My0yLjMxLTMuOTFBMy4yMiAzLjIyIDAgMDA0OC4yMyAyNWExIDEgMCAwMS0xIC4zOSAxIDEgMCAwMS0uNzktLjY1QTEwLjg0IDEwLjg0IDAgMDA0NCAyMC42NWE4Ljk0IDguOTQgMCAwMC0xMC4xLTIgOSA5IDAgMDAtNC40IDQuNDdoLTIuMmExMS4xNiAxMS4xNiAwIDAxNS43OS02LjMxIDEwLjk0IDEwLjk0IDAgMDExMi4yOSAyLjQyIDEyLjMzIDEyLjMzIDAgMDEyLjQgMy40NCA1LjIgNS4yIDAgMDE0LjY3LS42NyA1LjU2IDUuNTYgMCAwMTMuNjYgNS4xNWMzLjIyLjc3IDYuMzkgMy4yIDYuMzkgNy44NXptLTI4LS44N3YtN2gtMjB2MzBoMjB2LTE3aDJ2MThhMSAxIDAgMDEtMSAxaC0yMmExIDEgMCAwMS0xLTF2LTMyYTEgMSAwIDAxMS0xaDIyYTEgMSAwIDAxMSAxdjh6bTEzIDJoLTMwdjJoMzB6bS0yMi01aC04djJoOHptMyAxMGgtMTF2MmgxMXptLTQuMDkgNWgtNi44N3YyaDYuODd6bTcuMDkgMGgtNXYyaDV6bTIyLTEwaC00djJoNHoiIGZpbGw9IiNmZmYiLz4KICAgIDwvZz4KPC9zdmc+Cg=="
+      },
+      "statements": [
+        {
+          "resource": "*",
+          "service": "cloudformation",
+          "effect": "Allow",
+          "action": "cloudformation:DescribeStacks",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "cloudformation",
+          "effect": "Allow",
+          "action": "cloudformation:ListStackResources",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        }
+      ]
+    },
+    "states": {
+      "service": {
+        "name": "AWS Step Functions",
+        "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgICA8ZyB0cmFuc2Zvcm09InNjYWxlKC44NTMpIj4KICAgICAgICA8ZGVmcz4KICAgICAgICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iLTE1LjUzIiB5MT0iOTAuNTMiIHgyPSI5MC41MyIgeTI9Ii0xNS41MyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgogICAgICAgICAgICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjYjAwODRkIi8+CiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZjRmOGIiLz4KICAgICAgICAgICAgPC9saW5lYXJHcmFkaWVudD4KICAgICAgICA8L2RlZnM+CiAgICAgICAgPHBhdGggZmlsbD0idXJsKCNhKSIgZD0iTTAgMGg3NXY3NUgweiIvPgogICAgICAgIDxnIGZpbGw9IiNmZmYiPgogICAgICAgICAgICA8cGF0aCBkPSJNNTMuNSAzMS41di02YTEgMSAwIDAwLTEtMWgtMTR2LTIuMWE1IDUgMCAxMC0yIDB2Mi4xaC0xNGExIDEgMCAwMC0xIDF2NGgtOGExIDEgMCAwMC0xIDF2NWExIDEgMCAwMDEgMWg4djJoLThhMSAxIDAgMDAtMSAxdjVhMSAxIDAgMDAxIDFoOHY0YTEgMSAwIDAwMSAxaDE0djIuMWE1IDUgMCAxMDIgMHYtMi4xaDE0YTEgMSAwIDAwMS0xdi01aC0ydjRoLTI4di0zaDhhMSAxIDAgMDAxLTF2LTVhMSAxIDAgMDAtMS0xaC04di0yaDhhMSAxIDAgMDAxLTF2LTVhMSAxIDAgMDAtMS0xaC04di0zaDI4djV6bS0xMyAyNmEzIDMgMCAxMS0zLTMgMyAzIDAgMDEzIDN6bS0xMC0xN3YzaC0xNnYtM3ptMC05djNoLTE2di0zem00LTE0YTMgMyAwIDExMyAzIDMgMyAwIDAxLTMtM3oiLz4KICAgICAgICAgICAgPHBhdGggZD0iTTYxLjUgMzMuNWgtMjBhMSAxIDAgMDAtMSAxdjdhMSAxIDAgMDAxIDFoMjBhMSAxIDAgMDAxLTF2LTdhMSAxIDAgMDAtMS0xem0tMSA3aC0xOHYtNWgxOHoiLz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPgo="
+      },
+      "statements": [
+        {
+          "resource": "*",
+          "service": "states",
+          "effect": "Allow",
+          "action": "states:DescribeStateMachine",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        },
+        {
+          "resource": "*",
+          "service": "states",
+          "effect": "Allow",
+          "action": "states:ListStateMachines",
+          "source": {
+            "index": "0",
+            "policyName": "AWSLambda_FullAccess",
+            "policyType": "managed"
+          }
+        }
+      ]
+    }
+  }
+}
